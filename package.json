@@ -13,11 +13,17 @@
     "start": "cds-serve"
   },
   "private": true,
-  "cds": { "requires": {
-    "db": {
-    "kind": "sqlite",
-    "credentials": { "url": "db.sqlite" }
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      },
+      "auth": {
+        "kind": "mocked"
+      }
     }
-}}
-
+  }
 }
