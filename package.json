@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
+    "@cap-js/hana": "^2",
     "@sap/cds": "^9",
     "express": "^4"
   },
@@ -16,13 +17,12 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite",
-        "credentials": {
-          "url": "db.sqlite"
-        }
+        "kind": "sql"
       },
-      "auth": {
-        "kind": "mocked"
+      "[production]": {
+        "db": {
+          "kind": "hana"
+        }
       }
     }
   }
